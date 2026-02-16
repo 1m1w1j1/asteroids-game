@@ -1,5 +1,6 @@
 import pygame
-from constants import SCREEN_WIDTH, SCREEN_HEIGHT
+from constants.py import SCREEN_WIDTH
+from constants.py import SCREEN_HEIGHT
 
 
 
