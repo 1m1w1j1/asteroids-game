@@ -10,12 +10,18 @@ def main():
     print("Screen width:", SCREEN_WIDTH)
     print("Screen height:", SCREEN_HEIGHT)
     pygame.init()
+    fps_clock = pygame.time.Clock()
+    dt = 0
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     while True:
         log_state()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+        fps_clock.tick(60) 
+        dt = fps_clock.get_time() / 1000.0
+        #print("dt: ", dt)
+
     screen.fill("black")
     pygame.display.flip()
 if __name__ == "__main__":
